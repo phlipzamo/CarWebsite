@@ -20,12 +20,18 @@
         $isSuccess=$crud->insert($username,$lname,$fname,$email,$password);  
         
         if($isSuccess){
-            header("Location: homePage.php");
-            die();
+   ?>
+   <div class="alert alert-success" role="alert">
+        Successfully registered!
+    </div>
+    <form method = "post" action= "Login.php" >
+    <div class="col-12">
+    <button class="btn btn-primary" type="submit" name="submit" >Login</button>
+    </div>
+   <?php         
         }
         else{
             header("Location: register.php");
-            die();
         }
     }
    
