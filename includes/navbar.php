@@ -10,6 +10,15 @@
                         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="manageUsers.php">Manage Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="manageVehicles.php">Manage Vehicles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="manageInventory.php">Manage Inventory</a>
+                    </li>
+                    <li class="nav-item">
                        
                         <a class="nav-link active" aria-current="page" href="login.php">Logout</a>
                        
