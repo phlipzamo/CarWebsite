@@ -1,3 +1,8 @@
-<?php
-    echo 'Hello World';
+<?php 
+    $title ="Home Page";
+    include 'includes/header.php'; 
+?>
+
+<?php 
+    include 'includes/footer.php'; 
 ?>
