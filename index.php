@@ -1,15 +1,10 @@
 <?php 
-    $title ="Home Page";
+    $title ="Home";
     require_once 'includes/header.php'; 
-
+    require_once 'includes/navbar.php';
+   
 ?>
 
-<div class="navbarAndBody">
-    <ul class="nav flex-column">
-        <li class="nav-item">
-            <a class= "active" aria-current="page" href="Login.php">Login</a>
-        </li>
-    </ul>
     <img  src="img/carDealer.jpeg" alt="">
     <div></div>
 
