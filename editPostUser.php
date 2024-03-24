@@ -24,10 +24,11 @@
         else{
             $isAdmin = 0;
         }
+        $userId = $_POST['userId'];
 
-        $isSuccess=$userClass->insertUser($username,$lname,$fname,$email,$password,$isAdmin);  
-        
-        if($isSuccess){
+        $isSuccess=$userClass->updateUser($username,$lname,$fname,$email,$password,$isAdmin,$userId);  
+   
+        //if($isSuccess){
    ?>
    <div class="alert alert-success" role="alert">
         <?php echo $isAdmin?>
@@ -37,11 +38,11 @@
     <button class="btn btn-primary" type="submit" name="submit" >back</button>
     </div>
    <?php         
-        }
-        else{   
-            header("Location: newUser.php");
-        }
-    }
+       // }
+       // else{   
+      //      header("Location: newUser.php");
+       // }
+  }
    
     ?>
     </H1>

@@ -2,7 +2,7 @@
 </div>
 <div></div>
 </div>
-
+</div>
 
 <!-- Copyright -->
 <div class="footer">

@@ -35,4 +35,5 @@
             <!--Waves end-->
         </div>
         <!--Header ends-->
+<div class= "container">
   

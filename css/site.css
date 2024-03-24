@@ -75,9 +75,9 @@ body {
     font-weight: 300;
 }
 
-.btn-black{
+.btn-default{
     margin-top: 5%;
-    background-color: #0a4096 !important;
+    background-color: #0a4096;
     color: #fff;
 }
 
@@ -99,6 +99,10 @@ ul {
     padding: 8px 16px;
     text-decoration: none;
     text-align: center;
+    border-bottom: 5px solid #ffffff;  
+  }
+  li:last-child {
+    border-bottom: none;
   }
   
   /* Change the link color on hover */
@@ -123,6 +127,8 @@ ul {
     width: 100%;
     height: 3.5rem;            /* Footer height */
   }
+
+
 /* This is taken from https://javascript.plainenglish.io/20-header-design-html-for-website-c5cd71af6401  */
 
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);

@@ -5,7 +5,7 @@
         {
             $this->db = $conn;
         }
-        public function insert($username, $lname, $fname, $email, $password){
+        public function insertUser($username, $lname, $fname, $email, $password){
             
             try{
                 
@@ -32,5 +32,6 @@
                 return false;
             }
         }
+        
     }
 ?>
