@@ -4,7 +4,9 @@
     require_once 'includes/navbar.php'; 
     require_once 'db/conn.php';
 ?>
-<h2>"Needs implementaion"</h2>
+    
+   
+    <img style="margin-right:27%;" src="img/autoList.png" alt="">
 
 <?php 
     require_once 'includes/footer.php'; 

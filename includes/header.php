@@ -36,4 +36,17 @@
         </div>
         <!--Header ends-->
 <div class= "container">
+
+<?php
+    if(isset($_SESSION['user_id'])){
+        if(basename($_SERVER['SCRIPT_NAME'])!="index.php"){
+?>
+<div style = "margin-top: 3%; text-align: center;";>
+    <h4> You are currently logged in as: <?php echo $_SESSION['username']?></h4>
+</div>
+<?php
+    }
+   
+}
+?>
   

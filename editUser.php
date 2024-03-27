@@ -9,8 +9,27 @@
     else{
         echo "<h1> Something went wrong</h1>";
     }
+    if(isset($_POST["submit"]))
+    {
+        $fname=$_POST['firstName'];
+        $lname=$_POST['lastName'];
+        $email=$_POST['email'];
+        $username=$_POST['username'];
+        $password=$_POST['password'];
+        if(isset($_POST['isAdmin']))
+        {
+            $isAdmin =true;
+        }
+        else{
+            $isAdmin = 0;
+        }
+        $userId = $_POST['userId'];
+
+        $isSuccess=$userClass->updateUser($username,$lname,$fname,$email,$password,$isAdmin,$userId);  
+        header("Location: manageUsers.php");
+    }
 ?>
-<form method = "post" action= "editPostUser.php" class="row g-3">
+<form style="width: 90%;" method = "post" action= "<?php echo htmlentities($_SERVER['PHP_SELF']);?>" class="row g-3">
 <input type="hidden" name = "userId" value = "<?php echo $_GET['userId']?>"></label>
 <div class="col-md-4">
     <label for="validationServerUsername" class="form-label">Username</label>

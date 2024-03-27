@@ -5,7 +5,7 @@
    
 ?>
 
-    <img  src="img/carDealer.jpeg" alt="">
+    <img class = "frontImg"  src="img/carDealer.jpeg" alt="">
     <div></div>
 
 <?php 

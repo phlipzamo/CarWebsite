@@ -3,8 +3,26 @@
     require_once 'includes/header.php'; 
     require_once 'includes/navbar.php'; 
     require_once 'db/conn.php';
+    if(isset($_POST["submit"]))
+    {
+        $fname=$_POST['firstName'];
+        $lname=$_POST['lastName'];
+        $email=$_POST['email'];
+        $username=$_POST['username'];
+        $password=$_POST['password'];
+        if(isset($_POST['isAdmin']))
+        {
+            $isAdmin =true;
+        }
+        else{
+            $isAdmin = 0;
+        }
+
+        $isSuccess=$userClass->insertUser($username,$lname,$fname,$email,$password,$isAdmin);  
+        header("Location: manageUsers.php");
+    }
 ?>
-<form method = "post" action= "success.php" class="row g-3">
+<form style="width: 90%;" method = "post" action= "<?php echo htmlentities($_SERVER['PHP_SELF']);?>" class="row g-3">
 
 <div class="col-md-4">
     <label for="validationServerUsername" class="form-label">Username</label>
@@ -45,7 +63,7 @@
   </div>
 
   <div class="col-12">
-    <button class="btn btn-primary" type="submit" name="submit" >Submit form</button>
+    <button class="btn btn-default" type="submit" name="submit" >Submit form</button>
   </div>
 </form>
 <?php 

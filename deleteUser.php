@@ -5,7 +5,6 @@
     require_once 'db/conn.php';
     if (isset($_GET['userId'])){
         $results = $userClass->getUserInfo($_GET['userId']);
-        echo $results['user_id'];
     }
     else{
         echo "<h1> Something went wrong</h1>";
@@ -22,12 +21,15 @@
 } 
 
 ?>
-    <form method= "post" action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>">  
+    <form style="margin-right:30%;" method= "post" action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>">  
         <input type="hidden" name = "userId" value = "<?php echo $_GET['userId']?>"></label>
-        <h1>User Delete</h1>
+        <h1 style="text-align: center;">User Delete</h1>
         <h2> Are you sure you want to delete <?php echo $results['first_name']."".$results['last_name']?>?</h2>
-        <button type="submit" class="btn btn-default" name="btnYes">Yes</button>
-        <button type="submit" class="btn btn-default" name="btnNo">No</button>
+        <div style="text-align: center;"> 
+            <button type="submit" class="btn btn-default" name="btnYes">Yes</button>
+            <button type="submit" class="btn btn-default" name="btnNo">No</button>
+        </div>
+       
     </form>
 <?php 
     require_once 'includes/footer.php'; 

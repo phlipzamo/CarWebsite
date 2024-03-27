@@ -1,6 +1,5 @@
 
 </div>
-<div></div>
 </div>
 </div>
 
@@ -22,5 +21,27 @@ crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" 
 integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" 
 crossorigin="anonymous"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+$( function() {
+    $( "#soldDatePicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      yearRange: "-100:+0"
+    });
+    $( "#soldDatePicker" ).datepicker( "option", "dateFormat", "yy-mm-dd" );
+  } );
+  
+  $( function() {
+    $( "#purchaseDatePicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      yearRange: "-100:+0"
+    });
+    $( "#purchaseDatePicker" ).datepicker( "option", "dateFormat", "yy-mm-dd" );
+  } );
+  </script>
 </body>
 </html>

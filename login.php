@@ -47,7 +47,7 @@
                     <label for="validationServer01" class="form-label">Password</label>
                     <input type="password" class="form-control <?php echo $validity?>" id="validationServer01" placeholder="Password" name= "password" >
                 </div>
-                <button type="submit" class="btn btn-black" name="btnLogin">Login</button>      
+                <button style="margin-top: 5%;" type="submit" class="btn btn-default" name="btnLogin">Login</button>      
             </form>
         </div>
     </div>

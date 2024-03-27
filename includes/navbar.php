@@ -17,8 +17,8 @@
             break;
         case basename($_SERVER['SCRIPT_NAME'])=="manageVehicles.php":
             $navBarElements = createTab( "index.php", "Logout").
-                createTab( "vehicleMakes.php", "Vehicle Makes").
-                createTab( "vehicleModels.php", "Vehicle Models").
+                createTab( "manageMakes.php", "Vehicle Makes").
+                createTab( "manageModels.php", "Vehicle Models").
                 createTab("adminPage.php", "Admin Page");
             break;
         case basename($_SERVER['SCRIPT_NAME'])=="manageUsers.php"||basename($_SERVER['SCRIPT_NAME'])=="newUser.php"
@@ -28,25 +28,26 @@
                 createTab("adminPage.php", "Admin Page");   
             break;
         
-        case basename($_SERVER['SCRIPT_NAME'])=="vehicleMakes.php"||basename($_SERVER['SCRIPT_NAME'])=="newMake.php"
+        case basename($_SERVER['SCRIPT_NAME'])=="manageMakes.php"||basename($_SERVER['SCRIPT_NAME'])=="newMake.php"
             ||basename($_SERVER['SCRIPT_NAME'])=="editMake.php"||basename($_SERVER['SCRIPT_NAME'])=="deleteMake.php":
             $navBarElements = createTab( "index.php", "Logout").
                 createTab( "newMake.php", "New Make").
                 createTab( "manageVehicles.php", "Manage Vehicles").
                 createTab( "adminPage.php", "Admin Page");
             break;
-        case basename($_SERVER['SCRIPT_NAME'])=="vehicleModels.php"||basename($_SERVER['SCRIPT_NAME'])=="newModel.php"
+        case basename($_SERVER['SCRIPT_NAME'])=="manageModels.php"||basename($_SERVER['SCRIPT_NAME'])=="newModel.php"
             ||basename($_SERVER['SCRIPT_NAME'])=="editModel.php"||basename($_SERVER['SCRIPT_NAME'])=="deleteModel.php":
             $navBarElements = createTab( "index.php", "Logout").
                 createTab( "newModel.php", "New Model").
                 createTab( "manageVehicles.php", "Manage Vehicles").
                 createTab( "adminPage.php", "Admin Page");
             break;
-        case basename($_SERVER['SCRIPT_NAME'])=="manageInventory.php"://TODO
+        case basename($_SERVER['SCRIPT_NAME'])=="manageInventory.php"||basename($_SERVER['SCRIPT_NAME'])=="newInventory.php"
+        ||basename($_SERVER['SCRIPT_NAME'])=="editInventory.php"||basename($_SERVER['SCRIPT_NAME'])=="deleteInventory.php":
             $navBarElements = createTab( "index.php", "Logout").
-                createTab( "manageUsers.php", "Manage Users").
-                createTab( "manageVehicles.php", "Manage Vehicles").
+                createTab( "newInventory.php", "New Vehicle Inventory").
                 createTab( "manageInventory.php", "Manage Inventory");
+                createTab( "adminPage.php", "Admin Page");
             break;
         case basename($_SERVER['SCRIPT_NAME'])=="index.php":
             $navBarElements = createTab( "login.php", "Login");
@@ -66,15 +67,3 @@
                 echo $navBarElements
             ?>
         </ul>
-        
-            
-
-<?php
-    if(isset($_SESSION['user_id'])){
-?>
-<div>
-    <h4> You are currently logged in as: <?php echo $_SESSION['username']?></h4>
-<?php
-    }
-?>
-      

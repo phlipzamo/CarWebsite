@@ -6,7 +6,7 @@
     $results = $userClass->getUsers($_SESSION['user_id']);
 
 ?>
-<div style="height: 390px; overflow: auto">
+<div style="height: 350px; width:85%; overflow: auto">
 <table class="table table-striped-columns" style="height: 400px">
     <thead >
         <tr>
