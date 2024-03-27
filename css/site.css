@@ -1,140 +1,150 @@
 body {
-    font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 
 
-.main-head{
-    height: 150px;
-    background: #FFF;
-   
+.main-head {
+  height: 150px;
+  background: #FFF;
+
 }
 
 .sidenav {
-    height: 100%;
-    background-color: #0c4198;
-    overflow-x: hidden;
-    padding-top: 20px;
+  height: 100%;
+  background-color: #0c4198;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
 
 .main {
-    padding: 0px 10px;
+  padding: 0px 10px;
 }
+
 .navbarAndBody {
-    padding-top: 2%;
-    display: flex;
-    justify-content: space-between;
+  padding-top: 2%;
+  display: flex;
+  justify-content: space-between;
 }
 
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
+  .sidenav {
+    padding-top: 15px;
+  }
 }
 
 @media screen and (max-width: 450px) {
-    .login-form{
-        margin-top: 10%;
-    }
+  .login-form {
+    margin-top: 10%;
+  }
 
-    .register-form{
-        margin-top: 10%;
-    }
+  .register-form {
+    margin-top: 10%;
+  }
 }
 
-@media screen and (min-width: 768px){
-    .main{
-        margin-right: 10%; 
-    }
+@media screen and (min-width: 768px) {
+  .main {
+    margin-right: 10%;
+  }
 
-    .sidenav{
-        width: 40%;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-    }
+  .sidenav {
+    width: 40%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
 
-    .login-form{
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
+  .login-form {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
 
-    .register-form{
-        margin-top: 20%;
-    }
-}
-
-
-.login-main-text{
+  .register-form {
     margin-top: 20%;
-    padding: 60px;
-    color: #fff;
+  }
 }
 
-.login-main-text h2{
-    font-weight: 300;
+
+.login-main-text {
+  margin-top: 20%;
+  padding: 60px;
+  color: #fff;
 }
 
-.btn-default{
-    
-    background-color: #0a4096;
-    color: #fff;
+.login-main-text h2 {
+  font-weight: 300;
+}
+
+.btn-default {
+
+  background-color: #0a4096;
+  color: #fff;
 
 }
+
 .btn-default:hover {
   background-color: #24bdc1;
   color: #fff;
   transition: 0.2s;
 }
 
-.btn-secondary{
-    margin-top: 5%;
-    
+.btn-secondary {
+  margin-top: 5%;
+
 }
-.usernameHeader{
+
+.usernameHeader {
   margin-top: 30%;
 }
+
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 10%;
-    background-color: #ffffff;
-  }  
-  li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
-    text-align: center;
-    border-bottom: 5px solid #ffffff;  
-    border-radius:10px;
-  }
-  li:last-child {
-    border-bottom: none;
-  }
-  
-  /* Change the link color on hover */
-  li a:hover {
-    background-color: #24bdc1;
-    color: white;
-  }
-  .active {
-    background-color: #003a92;
-    color: white;
-  }
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 10%;
+  background-color: #ffffff;
+}
 
-  img {
-    width: 45%;
-    margin-right: 10%;
-  }
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-align: center;
+  border-bottom: 5px solid #ffffff;
+  border-radius: 10px;
+}
 
-  .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 3.5rem;            /* Footer height */
-  }
+li:last-child {
+  border-bottom: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #24bdc1;
+  color: white;
+}
+
+.active {
+  background-color: #003a92;
+  color: white;
+}
+
+img {
+  width: 45%;
+  margin-right: 10%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3.5rem;
+  /* Footer height */
+}
 
 
 /* This is taken from https://javascript.plainenglish.io/20-header-design-html-for-website-c5cd71af6401  */
@@ -142,44 +152,47 @@ ul {
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
 body {
-  margin:0;
+  margin: 0;
 }
 
 h1 {
   font-family: 'Lato', sans-serif;
-  font-weight:300;
+  font-weight: 300;
   letter-spacing: 2px;
-  font-size:48px;
+  font-size: 48px;
 }
+
 p {
   font-family: 'Lato', sans-serif;
   letter-spacing: 1px;
-  font-size:14px;
+  font-size: 14px;
   color: #333333;
 }
 
 .header {
-  position:relative;
-  text-align:center;
+  position: relative;
+  text-align: center;
   background: linear-gradient(60deg, #0c4198 0%, #32bcc3 100%);
-  color:white;
+  color: white;
 }
+
 .logo {
-  width:50px;
-  fill:white;
-  padding-right:15px;
-  display:inline-block;
+  width: 50px;
+  fill: white;
+  padding-right: 15px;
+  display: inline-block;
   vertical-align: middle;
 }
 
 .inner-header {
-  height:20vh;
-  width:100%;
+  height: 20vh;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
-.flex { /*Flexbox for containers*/
+.flex {
+  /*Flexbox for containers*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,60 +200,70 @@ p {
 }
 
 .waves {
-  position:relative;
+  position: relative;
   width: 100%;
-  height:15vh;
-  margin-bottom:-7px; /*Fix for safari gap*/
-  min-height:100px;
-  max-height:150px;
+  height: 15vh;
+  margin-bottom: -7px;
+  /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
 }
 
 .content {
-  position:relative;
-  height:20vh;
-  text-align:center;
+  position: relative;
+  height: 20vh;
+  text-align: center;
   background-color: white;
 }
 
 /* Animation */
 
-.parallax > use {
-  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+.parallax>use {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
 }
-.parallax > use:nth-child(1) {
+
+.parallax>use:nth-child(1) {
   animation-delay: -2s;
   animation-duration: 7s;
 }
-.parallax > use:nth-child(2) {
+
+.parallax>use:nth-child(2) {
   animation-delay: -3s;
   animation-duration: 10s;
 }
-.parallax > use:nth-child(3) {
+
+.parallax>use:nth-child(3) {
   animation-delay: -4s;
   animation-duration: 13s;
 }
-.parallax > use:nth-child(4) {
+
+.parallax>use:nth-child(4) {
   animation-delay: -5s;
   animation-duration: 20s;
 }
+
 @keyframes move-forever {
   0% {
-   transform: translate3d(-90px,0,0);
+    transform: translate3d(-90px, 0, 0);
   }
-  100% { 
-    transform: translate3d(85px,0,0);
+
+  100% {
+    transform: translate3d(85px, 0, 0);
   }
 }
+
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
   .waves {
-    height:40px;
-    min-height:40px;
+    height: 40px;
+    min-height: 40px;
   }
+
   .content {
-    height:30vh;
+    height: 30vh;
   }
+
   h1 {
-    font-size:24px;
+    font-size: 24px;
   }
 }
