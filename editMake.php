@@ -6,10 +6,7 @@ require_once 'includes/adminCheck.php';
 require_once 'db/conn.php';
 if (isset($_GET['id'])) {
   $results = $crud->getMake($_GET['id']);
-} else {
-  echo "<h1> Something went wrong</h1>";
 }
-require_once 'db/conn.php';
 if (!isset($_POST["submit"])) {
 ?>
   <form style="width: 60%;" method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" class="row g-3">

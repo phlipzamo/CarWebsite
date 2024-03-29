@@ -8,10 +8,8 @@ $types = $crud->getTypes();
 $powerTypes = $crud->getPowerTypes();
 if (isset($_GET['id'])) {
   $inventoryItem = $crud->getInventoryItem($_GET['id']);
-} else {
-  echo "<h1> Something went wrong</h1>";
-}
-if (isset($_POST["submit"])) {
+} 
+if (!isset($_POST["submit"])) {
 ?>
   <form style="width: 90%;" method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" class="row g-3">
     <input type="hidden" name="id" value="<?php echo $_GET['id'] ?>"></label>

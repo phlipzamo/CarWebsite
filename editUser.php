@@ -6,9 +6,7 @@ require_once 'includes/adminCheck.php';
 require_once 'db/conn.php';
 if (isset($_GET['userId'])) {
   $results = $userClass->getUserInfo($_GET['userId']);
-} else {
-  echo "<h1> Something went wrong</h1>";
-}
+} 
 if (!isset($_POST["submit"])) {
 ?>
   <form style="width: 90%;" method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" class="row g-3">
