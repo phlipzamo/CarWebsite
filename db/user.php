@@ -31,7 +31,7 @@ class User
 
             return true;
         } catch (PDOException $e) {
-            echo $e->getMessage();
+            $_SESSION["errorMessage"]= $e->getMessage();
             return false;
         }
     }
@@ -65,7 +65,7 @@ class User
 
             return true;
         } catch (PDOException $e) {
-            echo $e->getMessage();
+            $_SESSION["errorMessage"]= $e->getMessage();
             return false;
         }
     }
@@ -88,7 +88,7 @@ class User
             return $result;
         } catch (PDOException $e) {
 
-            echo $e->getMessage();
+            $_SESSION["errorMessage"]= $e->getMessage();
             return false;
         }
     }
@@ -109,7 +109,7 @@ class User
             return $result;
         } catch (PDOException $e) {
 
-            echo $e->getMessage();
+            $_SESSION["errorMessage"]= $e->getMessage();
             return false;
         }
     }
@@ -128,7 +128,7 @@ class User
             return $result;
         } catch (PDOException $e) {
 
-            echo $e->getMessage();
+            $_SESSION["errorMessage"]= $e->getMessage();
             return false;
         }
     }
@@ -146,7 +146,7 @@ class User
             return true;
         } catch (PDOException $e) {
 
-            echo $e->getMessage();
+            $_SESSION["errorMessage"]=$e->getMessage();
             return false;
         }
     }

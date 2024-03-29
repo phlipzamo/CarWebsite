@@ -38,13 +38,13 @@ if (!isset($_POST["submit"])) {
     <div class="col-md-4">
       <label for="validationServerPassword" class="form-label">Password</label>
       <div class="input-group has-validation">
-        <input type="password" class="form-control" id="validationServerUsername" name="password" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback">
+        <input type="password" class="form-control" id="validationServerUsername" name="password" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
       </div>
     </div>
     <div class="col-md-4">
       <label></label>
       <div class="form-check">
-        <input type="checkbox" id="isAdmin" name="isAdmin" value=<?php if ($results["is_admin"] == 1) {
+        <input type="checkbox" id="isAdmin" name="isAdmin" <?php if ($results["is_admin"] == 1) {
                                                                     echo "checked";
                                                                   } ?>>
         <label for="isAdmin"> Is Admin</label><br>
