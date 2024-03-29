@@ -1,5 +1,5 @@
 <?php
-$title = "Manage Users";
+$title = "Manage Makes";
 require_once 'includes/header.php';
 require_once 'includes/navbar.php';
 require_once 'includes/adminCheck.php';

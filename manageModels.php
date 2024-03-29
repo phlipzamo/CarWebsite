@@ -1,5 +1,5 @@
 <?php
-$title = "Manage models";
+$title = "Manage Models";
 require_once 'includes/header.php';
 require_once 'includes/navbar.php';
 require_once 'includes/adminCheck.php';

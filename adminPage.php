@@ -1,5 +1,5 @@
 <?php
-$title = "Home Page";
+$title = "Admin Page";
 require_once 'includes/header.php';
 require_once 'includes/navbar.php';
 require_once 'includes/adminCheck.php';

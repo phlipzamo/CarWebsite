@@ -54,8 +54,7 @@ switch (true) {
             createTab("manageInventory.php", "Manage Inventory");
         if ($_SESSION['isAdmin'] == 1) {
             $navBarElements .= createTab("adminPage.php", "Admin Page");
-        }
-        else{
+        } else {
             $navBarElements .= createTab("userPage.php", "User Page");
         }
         break;

@@ -43,11 +43,10 @@
                 </div>
         <?php
             }
-        }
-        else if(basename($_SERVER['SCRIPT_NAME']) == "login.php"){
+        } else if (basename($_SERVER['SCRIPT_NAME']) == "login.php" || basename($_SERVER['SCRIPT_NAME']) == "feedback.php"
+        ||basename($_SERVER['SCRIPT_NAME']) == "index.php") {
             //dont do nothing
-        }
-        else{
+        } else {
             header("Location: login.php");
         }
         ?>

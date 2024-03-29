@@ -16,15 +16,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['username'] = $username;
             $_SESSION['user_id'] = $results['user_id'];
             $_SESSION['isAdmin'] = $results['is_admin'];
-            if($_SESSION['isAdmin']==1){
+            if ($_SESSION['isAdmin'] == 1) {
                 header("Location: adminPage.php");
-            }
-            else{
+            } else {
                 header("Location: userPage.php");
             }
-            
         }
-    } 
+    }
 } else {
     session_destroy();
     session_unset();
