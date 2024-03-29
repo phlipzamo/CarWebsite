@@ -2,6 +2,7 @@
 $title = "Manage models";
 require_once 'includes/header.php';
 require_once 'includes/navbar.php';
+require_once 'includes/adminCheck.php';
 require_once 'db/conn.php';
 $makes = $crud->getMakes();
 if (isset($_POST["btnMakeUpdate"])) {

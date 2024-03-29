@@ -143,6 +143,7 @@ class User
             $stmt->bindparam(':userID', $userID);
 
             $stmt->execute();
+            return true;
         } catch (PDOException $e) {
 
             echo $e->getMessage();

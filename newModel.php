@@ -2,6 +2,7 @@
 $title = "New Model";
 require_once 'includes/header.php';
 require_once 'includes/navbar.php';
+require_once 'includes/adminCheck.php';
 require_once 'db/conn.php';
 $results = $crud->getMakes();
 

@@ -10,17 +10,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $password = $_POST['password'];
         $results = $userClass->getUser($username, $password);
         if (!$results) {
-
             $validity = "is-invalid";
         } else {
             $validity = "";
             $_SESSION['username'] = $username;
             $_SESSION['user_id'] = $results['user_id'];
-            header("Location: adminPage.php");
+            $_SESSION['isAdmin'] = $results['is_admin'];
+            if($_SESSION['isAdmin']==1){
+                header("Location: adminPage.php");
+            }
+            else{
+                header("Location: userPage.php");
+            }
+            
         }
-    } else if (isset($_POST["btnRegister"])) {
-        header("Location: register.php");
-    }
+    } 
 } else {
     session_destroy();
     session_unset();

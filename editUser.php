@@ -2,28 +2,16 @@
 $title = "Edit User";
 require_once 'includes/header.php';
 require_once 'includes/navbar.php';
+require_once 'includes/adminCheck.php';
 require_once 'db/conn.php';
 if (isset($_GET['userId'])) {
   $results = $userClass->getUserInfo($_GET['userId']);
 } else {
   echo "<h1> Something went wrong</h1>";
 }
-if (isset($_POST["submit"])) {
-  $fname = $_POST['firstName'];
-  $lname = $_POST['lastName'];
-  $email = $_POST['email'];
-  $username = $_POST['username'];
-  $password = $_POST['password'];
-  if (isset($_POST['isAdmin'])) {
-    $isAdmin = true;
-  } else {
-    $isAdmin = 0;
-  }
-  $userId = $_POST['userId'];
+if (!isset($_POST["submit"])) {
+  
 
-  $isSuccess = $userClass->updateUser($username, $lname, $fname, $email, $password, $isAdmin, $userId);
-  header("Location: manageUsers.php");
-}
 ?>
 <form style="width: 90%;" method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" class="row g-3">
   <input type="hidden" name="userId" value="<?php echo $_GET['userId'] ?>"></label>
@@ -72,5 +60,28 @@ if (isset($_POST["submit"])) {
   </div>
 </form>
 <?php
+
+} else if (isset($_POST["submit"])) {
+  $fname = $_POST['firstName'];
+  $lname = $_POST['lastName'];
+  $email = $_POST['email'];
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+  if (isset($_POST['isAdmin'])) {
+    $isAdmin = true;
+  } else {
+    $isAdmin = 0;
+  }
+  $userId = $_POST['userId'];
+
+  $isSuccess = $userClass->updateUser($username, $lname, $fname, $email, $password, $isAdmin, $userId);
+  //header("Location: manageUsers.php");
+  if (!$isSuccess) {
+      include "includes/error.php";
+  } else {
+      $_SESSION["successMessage"] = "User Updated!!";
+      include "includes/success.php";
+  }
+}
 require_once 'includes/footer.php';
 ?>

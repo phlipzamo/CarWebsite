@@ -6,16 +6,8 @@ require_once 'db/conn.php';
 $results = false;
 if (isset($_GET['id'])) {
     $inventoryItem = $crud->getInventoryItem($_GET['id']);
-} else {
-    echo "<h1> Something went wrong</h1>";
-}
-$validity = "";
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (isset($_POST["btnYes"])) {
-        $results = $crud->deleteInventory($_POST['id']);
-    }
-}
-if (!$results) {
+
+
 ?>
     <form style="margin-right: 30%;" method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>">
         <input type="hidden" name="id" value="<?php echo $_GET['id'] ?>"></label>
@@ -28,7 +20,21 @@ if (!$results) {
     </form>
 <?php
 } else {
-    include "includes/success.php";
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        if (isset($_POST["btnYes"])) {
+            $results = $crud->deleteInventory($_POST['id']);
+            if ($results) {
+                $_SESSION["successMessage"] = "The vehicle was deleted!!";
+                include "includes/success.php";
+            } else {
+                include "includes/error.php";
+            }
+        } else if (isset($_POST["btnNo"])) {
+            $_SESSION["warningMessage"] = "The vehicle was not deleted!!";
+            include "includes/warning.php";
+        }
+    }
 }
+
 require_once 'includes/footer.php';
 ?>

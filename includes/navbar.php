@@ -16,6 +16,10 @@ switch (true) {
             createTab("manageVehicles.php", "Manage Vehicles") .
             createTab("manageInventory.php", "Manage Inventory");
         break;
+    case basename($_SERVER['SCRIPT_NAME']) == "userPage.php":
+        $navBarElements = createTab("index.php", "Logout") .
+            createTab("manageInventory.php", "Manage Inventory");
+        break;
     case basename($_SERVER['SCRIPT_NAME']) == "manageVehicles.php":
         $navBarElements = createTab("index.php", "Logout") .
             createTab("manageMakes.php", "Vehicle Makes") .
@@ -47,14 +51,19 @@ switch (true) {
         || basename($_SERVER['SCRIPT_NAME']) == "editInventory.php" || basename($_SERVER['SCRIPT_NAME']) == "deleteInventory.php":
         $navBarElements = createTab("index.php", "Logout") .
             createTab("newInventory.php", "New Vehicle") .
-            createTab("manageInventory.php", "Manage Inventory") .
-            createTab("adminPage.php", "Admin Page");
+            createTab("manageInventory.php", "Manage Inventory");
+        if ($_SESSION['isAdmin'] == 1) {
+            $navBarElements .= createTab("adminPage.php", "Admin Page");
+        }
+        else{
+            $navBarElements .= createTab("userPage.php", "User Page");
+        }
         break;
     case basename($_SERVER['SCRIPT_NAME']) == "index.php":
-        $navBarElements = createTab("login.php", "Login");
         session_destroy();
         session_unset();
         session_start();
+        $navBarElements = createTab("login.php", "Login");
         break;
     case basename($_SERVER['SCRIPT_NAME']) == "login.php":
         $navBarElements = createTab("index.php", "Home Page");

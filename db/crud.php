@@ -103,6 +103,7 @@ class Crud
             $stmt->bindparam(':id', $id);
 
             $stmt->execute();
+            return true;
         } catch (PDOException $e) {
 
             $_SESSION["errorMessage"] .= $e->getMessage();
@@ -222,6 +223,7 @@ class Crud
             $stmt->bindparam(':id', $id);
 
             $stmt->execute();
+            return true;
         } catch (PDOException $e) {
 
             $_SESSION["errorMessage"] .= $e->getMessage();

@@ -44,4 +44,10 @@
         <?php
             }
         }
+        else if(basename($_SERVER['SCRIPT_NAME']) == "login.php"){
+            //dont do nothing
+        }
+        else{
+            header("Location: login.php");
+        }
         ?>

@@ -80,20 +80,20 @@ if (!isset($_POST["submit"])) {
   <div class="col-md-4">
     <label for="validationServerType" class="form-label">Sold Date</label>
     <div class="input-group has-validation">
-      <input type="text" class="form-control" id="soldDatePicker" name="soldDate" required>
+      <input type="text" class="form-control" id="soldDatePicker" name="soldDate" >
     </div>
   </div>
 
   <div class="col-md-4">
     <label for="validationServerType" class="form-label">Sold Price</label>
     <div class="input-group has-validation">
-      <input type="text" class="form-control" id="validationServerUsername" name="soldPrice" required>
+      <input type="text" class="form-control" id="validationServerUsername" name="soldPrice" >
     </div>
   </div>
   <div class="col-md-4">
     <label for="validationServerModel" class="form-label">Additional Cost</label>
     <div class="input-group has-validation">
-      <input type="text" class="form-control" id="validationServerModel" name="addCost" required>
+      <input type="text" class="form-control" id="validationServerModel" name="addCost" >
     </div>
   </div>
 
@@ -112,9 +112,9 @@ if (!isset($_POST["submit"])) {
   $vin = $_POST["vin"];
   $purchaseDate = $_POST["purchaseDate"];
   $purchasePrice = $_POST["purchasePrice"];
-  $soldDate = $_POST["soldDate"];
-  $soldPrice = $_POST["soldPrice"];
-  $addCost = $_POST["addCost"];
+  $soldDate = ($_POST["soldDate"] == "") ? null : $_POST["soldDate"];
+  $soldPrice = ($_POST["soldPrice"] == "") ? null : $_POST["soldPrice"];
+  $addCost = ($_POST["addCost"] == "") ? null : $_POST["addCost"];
 
   $isSuccess = $crud->insertInventory(
     $modelID[0],
